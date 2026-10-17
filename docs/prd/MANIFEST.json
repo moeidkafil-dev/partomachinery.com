@@ -1,0 +1,168 @@
+{
+  "package": "IMMERSIVE_INDUSTRIAL_WEB_PRD",
+  "generated_on": "2026-10-15",
+  "reference": "https://organimo.com/",
+  "description": "Agent-ready PRD, implementation contracts, architecture, interaction specs, QA and handoff documents.",
+  "files": [
+    {
+      "path": "00_MASTER_PRD.md",
+      "bytes": 5300,
+      "sha256": "69eb47e422baaa44f86150594185823b1e26d3c3fd34756b5fc67fc86e1fd7a3"
+    },
+    {
+      "path": "AGENT_EXECUTION_CONTRACT.md",
+      "bytes": 2413,
+      "sha256": "eab51f52b7dfda7bfe63964a26390d8746d985184b40b09c7a68eb521a34d7a9"
+    },
+    {
+      "path": "AGENT_PROMPT_EN.md",
+      "bytes": 1858,
+      "sha256": "3dd3da5d04cbb733498adc926f41c0636a5237272c3fcd201108fc3e825c5e00"
+    },
+    {
+      "path": "DOCUMENT_INVENTORY.md",
+      "bytes": 2113,
+      "sha256": "9909da553e9f96ab6952bbbb5b2c50505c7e0f34b0d7b1818c447d9644dfaa9d"
+    },
+    {
+      "path": "README_FA.md",
+      "bytes": 2397,
+      "sha256": "e99d6554f57fbe6b81692e1c88607a56aa6a181a9cfbe913a574725bff71ddf4"
+    },
+    {
+      "path": "appendices/DECISION_LOG.md",
+      "bytes": 439,
+      "sha256": "2a97b7b74fc20083d2baecc2912db8f7721d26f727a6d8ac2fcc73e573c5fd02"
+    },
+    {
+      "path": "appendices/GLOSSARY.md",
+      "bytes": 614,
+      "sha256": "f4d4dea75624648caa6e5f9c729abe30e6f6d51970d7982882f1fc7ac57a77c8"
+    },
+    {
+      "path": "appendices/OPEN_QUESTIONS.md",
+      "bytes": 913,
+      "sha256": "a142f337047c2011315d04c7776c383bfff1179002558633012a707645384607"
+    },
+    {
+      "path": "appendices/RELEASE_CHECKLIST.md",
+      "bytes": 751,
+      "sha256": "17feb3695e4f7e4b18c66d588d2a900516165b7454c1786d28d5c4c1687de300"
+    },
+    {
+      "path": "architecture/DATA_CONTRACTS.md",
+      "bytes": 1179,
+      "sha256": "b5befa11a960196e6c2ecdc8d53a83bdb7e0b1d7d3efca544054491252212df7"
+    },
+    {
+      "path": "architecture/SYSTEM_ARCHITECTURE.md",
+      "bytes": 1321,
+      "sha256": "07f874019bb02553aea8b88c4ae75f8d6716f66107d334b8beaa0e046effb1bf"
+    },
+    {
+      "path": "architecture/TECHNICAL_DECISIONS.md",
+      "bytes": 877,
+      "sha256": "8e5bd00df96d300396e581b95d80fc970b956895ac6a5c41765233d88a2f9d1e"
+    },
+    {
+      "path": "content/CONTENT_MODEL_AND_PLACEHOLDERS.md",
+      "bytes": 891,
+      "sha256": "db4858500a21cdb6dc9679bc16b3d9deebe3967aa5638be5296920ce130510b5"
+    },
+    {
+      "path": "content/PRODUCT_DATA_TEMPLATE.json",
+      "bytes": 1010,
+      "sha256": "5a799d865f0f1648b9fa5dedd5578d834aee26bb536a3f0985704019c8ce8cb9"
+    },
+    {
+      "path": "design/RESPONSIVE_AND_REDUCED_MOTION.md",
+      "bytes": 831,
+      "sha256": "857904d87e852706cf38230f07dba08a5a03b55b90d699b07e0b45dac658ea2f"
+    },
+    {
+      "path": "design/SCENE_CHAPTER_BLUEPRINT.md",
+      "bytes": 1055,
+      "sha256": "6d38724af7651e1cec0a88d518015bfb03ef8af7816e1b7a292d86b25fe0aac3"
+    },
+    {
+      "path": "design/VISUAL_SYSTEM.md",
+      "bytes": 790,
+      "sha256": "22d062c48219d286a51ca640acacc2320835945a9193b293bd0a8e5daa1c5c33"
+    },
+    {
+      "path": "operations/ASSET_PIPELINE.md",
+      "bytes": 857,
+      "sha256": "6b7f57ef0a482948bad5127e0d67b71ea1ac588629fa1cfb1e047d63937d2cd2"
+    },
+    {
+      "path": "operations/ENVIRONMENT_AND_CONFIGURATION.md",
+      "bytes": 693,
+      "sha256": "85865ceb02ec525de6d515018a8176f33f7a773cc1522488d931c285f7cb6d32"
+    },
+    {
+      "path": "operations/IMPLEMENTATION_WORKPLAN.md",
+      "bytes": 1040,
+      "sha256": "dcd095ac9ffad800061ff510c3a09c7b394f6d93943d37b1653972b9b15d739f"
+    },
+    {
+      "path": "operations/REPOSITORY_AND_HANDOFF.md",
+      "bytes": 694,
+      "sha256": "b139f673a056aa7ae199153deec6921390cc0a18630f00d2e04b30b91e024164"
+    },
+    {
+      "path": "operations/SECURITY_PRIVACY.md",
+      "bytes": 872,
+      "sha256": "d55136de929a1cfb0abdc8fee7d6399577e5c9525fa259c674d123ac1ecf1410"
+    },
+    {
+      "path": "specs/CHARACTER_INTERACTION_SPEC.md",
+      "bytes": 1504,
+      "sha256": "a255a24e93278efd8320831343955cef957760ca023d3bd6903607acd1b0e01a"
+    },
+    {
+      "path": "specs/FUNCTIONAL_REQUIREMENTS.md",
+      "bytes": 2211,
+      "sha256": "06ad9f72e053befec38857454e2cea72567630ec02c874f7618d0f5070ef2c70"
+    },
+    {
+      "path": "specs/INTERACTION_INVENTORY.md",
+      "bytes": 1033,
+      "sha256": "c8bea84bf15995ea49989cf7a09c318982707485186307d9a5842b7934c6c5c0"
+    },
+    {
+      "path": "specs/PRODUCT_EXPERIENCE_SPEC.md",
+      "bytes": 945,
+      "sha256": "c1334ae29b119b4e37f579ce61c2ce1f22905d8fb4a395abb6b66a3baf5e9c10"
+    },
+    {
+      "path": "specs/SCROLL_MOTION_SPEC.md",
+      "bytes": 1737,
+      "sha256": "ae3285f9de6ea13f59fdfdddb939616d86d1766ee52e929e9a9fb2ddb650404b"
+    },
+    {
+      "path": "specs/SUPPORT_TICKET_SPEC.md",
+      "bytes": 1624,
+      "sha256": "9e4f54a934226bcad1d77a8038002e52aa3f00369771866645e4663fdf360007"
+    },
+    {
+      "path": "specs/USER_STORIES_AND_FLOWS.md",
+      "bytes": 917,
+      "sha256": "eb9d751dd45c6324ff755f3b60861bfcd71f738722327088149191554f53bcae"
+    },
+    {
+      "path": "testing/ACCEPTANCE_TESTS.md",
+      "bytes": 1385,
+      "sha256": "90d9d7c8721dc3f2a1c43c1facc4caed56befc7a732f2cf6d7f69ed49bf06d39"
+    },
+    {
+      "path": "testing/PERFORMANCE_BUDGET.md",
+      "bytes": 720,
+      "sha256": "0a256476d9fcca656b7f7cf18ec921910b2f53eebfe4ddd8f265214036201118"
+    },
+    {
+      "path": "testing/TEST_STRATEGY.md",
+      "bytes": 957,
+      "sha256": "6830dde9b0c5a7016314f3c62e4dc23e88bf4b810c29c1592c9a1f79ee2a9f5c"
+    }
+  ]
+}

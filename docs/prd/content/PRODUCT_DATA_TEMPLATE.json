@@ -1,0 +1,38 @@
+{
+  "company": {
+    "name": "[COMPANY_NAME]",
+    "tagline": "[APPROVED_TAGLINE]",
+    "logoPath": null,
+    "supportEmail": "[SUPPORT_EMAIL]",
+    "phone": "[PHONE_IF_APPROVED]",
+    "address": "[OFFICIAL_ADDRESS]"
+  },
+  "products": [
+    {
+      "id": "example-product",
+      "slug": "example-product",
+      "displayName": "[PRODUCT_NAME]",
+      "categoryId": "extrusion",
+      "summary": "[APPROVED_PRODUCT_SUMMARY]",
+      "applications": [],
+      "features": [],
+      "specifications": [
+        {
+          "id": "capacity",
+          "label": "[SPEC_LABEL]",
+          "value": "[VERIFIED_SPEC_REQUIRED]",
+          "unit": "[UNIT_IF_APPLICABLE]",
+          "verified": false,
+          "internalSourceNote": "Replace only with verified manufacturer data."
+        }
+      ],
+      "modelAssetPath": null,
+      "posterAssetPath": null,
+      "gallery": [],
+      "documentation": [],
+      "inquirySubject": "Technical inquiry: [PRODUCT_NAME]",
+      "status": "draft"
+    }
+  ],
+  "faq": []
+}

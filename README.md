@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Parto Plastic Machinery — Immersive Industrial Website
 
-## Getting Started
+Production-quality cinematic website for **Parto Plastic Machinery**, centred on the
+**HTE75 Twin-Screw Compounding & Pelletizing Line**, built from real factory-floor
+footage supplied by the client.
 
-First, run the development server:
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install          # dependencies (lockfile: bun.lock)
+bun run dev          # development server on port 3000 (auto-managed in this workspace)
+bun run lint         # ESLint (Next.js rules)
+bunx tsc --noEmit    # TypeScript strict check
+bun test tests/      # unit tests (progress mapping + support validation)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production build in a standard environment:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run build        # next build + standalone output
+bun run start        # serve the production build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> Note (sandbox environment): the workspace's managed dev server occupies `.next`;
+> `bun run build` is disabled by the platform here. Lint, typecheck, unit tests and
+> full browser QA were executed instead — see `docs/TEST_REPORT.md`.
 
-## Learn More
+## What is inside
 
-To learn more about Next.js, take a look at the following resources:
+| Path | Purpose |
+| --- | --- |
+| `src/app/page.tsx` | Page composition (single cinematic route) |
+| `src/app/api/support/route.ts` | Support/inquiry endpoint (typed, server-validated) |
+| `src/components/scroll/ScrollStage.tsx` | Pinned scroll-driven frame-sequence hero |
+| `src/components/character/PartoBot.tsx` | Procedural mascot: gaze, left/right blinks, support trigger |
+| `src/components/support/SupportPanel.tsx` | Accessible support dialog with honest state machine |
+| `src/lib/content.ts` | **Central content source** — edit copy/product data here |
+| `src/lib/shotMap.ts` | Chapter/progress/time mapping (pure, unit-tested) |
+| `src/lib/supportValidation.ts` | Shared zod validation + typed API client |
+| `media/` | Source media archive (originals never modified) |
+| `public/media/` | Web derivatives (frames, video, posters, logo) |
+| `scripts/media_pipeline.sh` | Regenerates all derivatives from source media |
+| `scripts/process_logo.py` | Transparent logo/favicon derivatives |
+| `docs/` | Shot map, test report, media guide, PRD archive |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## The scroll experience
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The hero pins for ~520vh of native scroll (no wheel hijacking). Scroll progress maps
+deterministically onto the 15.04s source clip through a 120-frame WebP sequence
+(8 fps extraction, ~2.7 MB desktop / 1.4 MB mobile). Reverse scroll reverses the
+scene exactly — state is a pure function of scroll position. Chapters: Arrival →
+Reveal → Detail → Capability → Your line, each mapped to inspected footage windows
+(see `docs/SHOT_MAP.md`).
 
-## Deploy on Vercel
+Fallbacks: poster while loading → progressive frame preload → canvas scrub.
+Reduced motion (`prefers-reduced-motion` or `?motion=static`) replaces the pin with
+a static poster and stacked chapters.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Support / inquiry truth policy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`POST /api/support` always answers truthfully:
+
+- No `SUPPORT_WEBHOOK_URL` configured (default): `{status:"unconfigured"}` — the UI
+  explicitly says the message was **not** sent. No fake success, no invented ticket IDs.
+- With `SUPPORT_WEBHOOK_URL` set (server-side env only), the validated payload is
+  forwarded; `accepted` is shown only on a real 2xx from that endpoint.
+
+## Editing content
+
+All public copy, product fields, FAQ and nav live in `src/lib/content.ts`.
+Product specifications carry `verified: false` until the certified datasheet exists;
+unverified rows render as "Provided on request" — never as claimed values.
+
+## Media workflow
+
+See `MEDIA_GUIDE.md` (root) for uploading replacement videos and regenerating all
+assets with one command. Originals in `media/` are never modified by the pipeline.
